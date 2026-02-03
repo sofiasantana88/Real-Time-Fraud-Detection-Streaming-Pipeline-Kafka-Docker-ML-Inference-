@@ -35,17 +35,16 @@ This project demonstrates core **data engineering concepts** including streaming
 ## Payment Event Schema
 
 Each Kafka message follows this structure:
-
-```json
 {
   "payment_id": 1,
   "amount": 1200,
   "country_risk_score": 0.68,
   "failed_logins": 3,
   "transaction_hour": 18,
-  "is_new_device": 1
-}
-Project Structure
+  "is_new_device": 1}
+
+## Project Structure
+
 kafka-fraud-streaming/
 ├── docker-compose.yml
 ├── README.md
