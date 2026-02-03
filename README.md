@@ -50,18 +50,18 @@ Each Kafka message follows this structure:
 
 How to Run the Pipeline
 1) Start Kafka
-From the project root:
+  From the project root:
 
-docker compose up -d
-docker ps
+  docker compose up -d
+  docker ps
 2) Train the model (optional)
-If the model file already exists, this step can be skipped.
+  If the model file already exists, this step can be skipped.
 
-py .\training\train_fraud_model.py
+  py .\training\train_fraud_model.py
 3) Start the consumer (stream processor)
-py .\streaming\consumer.py
+  py .\streaming\consumer.py
 4) Start the producer (in a second terminal)
-py .\streaming\producer.py
+  py .\streaming\producer.py
 You should see payment events produced every 3 seconds and fraud scores printed in real time.
 
 Output
