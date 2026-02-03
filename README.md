@@ -48,23 +48,24 @@ Each Kafka message follows this structure:
 <img width="191" height="260" alt="image" src="https://github.com/user-attachments/assets/b6f1d05e-9c8d-467b-a5b3-f19df8d39e1f" />
 
 
-How to Run the Pipeline
-1) Start Kafka
+## How to Run the Pipeline
+1. Start Kafka
   From the project root:
 
   docker compose up -d
   docker ps
-2) Train the model (optional)
+2. Train the model (optional)
   If the model file already exists, this step can be skipped.
 
   py .\training\train_fraud_model.py
-3) Start the consumer (stream processor)
+3. Start the consumer (stream processor)
   py .\streaming\consumer.py
-4) Start the producer (in a second terminal)
+4. Start the producer (in a second terminal)
   py .\streaming\producer.py
 You should see payment events produced every 3 seconds and fraud scores printed in real time.
 
-Output
+## Output
+
 Fraud scores are appended to:
 
 outputs/fraud_scores_stream.csv
@@ -85,7 +86,7 @@ The pipeline can be started end-to-end using a PowerShell launcher script:
 .\scripts\launch_project.ps1
 This script automatically starts Kafka, the consumer, and the producer.
 
-Future Improvements
+## Future Improvements
 Persist fraud scores to a database (Postgres / SQLite)
 
 Publish scored events to a second Kafka topic
