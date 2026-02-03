@@ -54,14 +54,18 @@ Each Kafka message follows this structure:
 
   docker compose up -d
   docker ps
+  
 2. Train the model (optional)
   If the model file already exists, this step can be skipped.
 
   py .\training\train_fraud_model.py
+  
 3. Start the consumer (stream processor)
   py .\streaming\consumer.py
+
 4. Start the producer (in a second terminal)
   py .\streaming\producer.py
+
 You should see payment events produced every 3 seconds and fraud scores printed in real time.
 
 ## Output
