@@ -61,24 +61,20 @@ You should see payment events produced every 3 seconds and fraud scores printed 
 
 ## Output
 
-Fraud scores are appended to:
+Fraud scores are appended to: outputs/fraud_scores_stream.csv
 
-outputs/fraud_scores_stream.csv
 This file can be used for downstream analytics or visualization.
 
 Kafka Offset Behavior
-The consumer is configured with:
 
-auto_offset_reset="latest"
+The consumer is configured with: auto_offset_reset="latest"
 
 a stable consumer group
 
 This ensures only new real-time events are processed, mimicking production streaming behavior.
 
 One-Click Launcher (Windows)
-The pipeline can be started end-to-end using a PowerShell launcher script:
-
-.\scripts\launch_project.ps1
+The pipeline can be started end-to-end using a PowerShell launcher script: .\scripts\launch_project.ps1
 This script automatically starts Kafka, the consumer, and the producer.
 
 ## Future Improvements
