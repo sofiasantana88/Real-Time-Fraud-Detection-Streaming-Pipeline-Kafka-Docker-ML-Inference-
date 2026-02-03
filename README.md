@@ -45,22 +45,8 @@ Each Kafka message follows this structure:
 
 ## Project Structure
 
-kafka-fraud-streaming/
-├── docker-compose.yml
-├── README.md
-├── data/
-│   └── historical_payments.csv
-├── models/
-│   └── fraud_model.pkl
-├── outputs/
-│   └── fraud_scores_stream.csv
-├── scripts/
-│   └── launch_project.ps1
-├── streaming/
-│   ├── producer.py
-│   └── consumer.py
-└── training/
-    └── train_fraud_model.py
+<img width="191" height="260" alt="image" src="https://github.com/user-attachments/assets/b6f1d05e-9c8d-467b-a5b3-f19df8d39e1f" />
+
 
 How to Run the Pipeline
 1) Start Kafka
