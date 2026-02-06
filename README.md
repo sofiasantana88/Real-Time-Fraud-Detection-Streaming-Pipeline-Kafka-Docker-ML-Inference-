@@ -6,6 +6,15 @@ This project demonstrates core **data engineering concepts** including streaming
 
 ---
 
+## Requirements 
+
+pip install -r requirements.txt
+docker compose up -d
+py .\streaming\consumer.py
+py .\streaming\producer.py
+
+---
+
 ## Architecture Overview
 
 **Producer (Python)** ➜ **Kafka Topic (`test-payments`)** ➜ **Consumer / Stream Processor (Python)** ➜ **CSV Sink**
